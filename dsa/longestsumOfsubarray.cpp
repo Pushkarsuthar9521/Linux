@@ -4,7 +4,7 @@ using namespace std;
 #define ll long long int
 
 int longestsubarray(ll a[],int n){
-    ll maxsum=0;
+    ll maxsum=INT64_MIN;
     ll cursum=0;
     for(int i=0;i<n;i++)
     {
