@@ -24,6 +24,35 @@ void first(int arr[], int n){
      cout<<"2"<<" ";
 }
 
+// second approach using 3 pointer
+void second(int arr[], int n){
+    int left = 0;
+    int mid = 0;
+    int right = n-1;
+    for (int i = 0; i < n;i++)
+    {
+        if(arr[mid] == 0)
+        {
+         swap(arr[left], arr[mid]);
+         left++;
+         mid++;
+        }
+        else if(arr[mid]==1)
+        {
+         mid++;
+        }
+        else
+        {
+         swap(arr[right], arr[mid]);
+         right--;
+        }
+    }
+    for (int i = 0; i < n;i++)
+     {
+        cout << arr[i] << " ";
+     }
+}
+
 
 int main()
 {
@@ -36,4 +65,6 @@ int main()
     }
 
     first(arr,n);
+    cout << endl;
+    second(arr, n);
 }
