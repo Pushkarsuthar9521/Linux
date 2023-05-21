@@ -9,7 +9,7 @@ int majorityElement(int arr[], int n)
     {
         for(int j=0; j<n;j++)
         {
-            if(a[i]==a[j])
+            if(arr[i]==arr[j])
                 count++;
             if(count>=n/2)
                 return arr[i];
