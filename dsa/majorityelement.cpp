@@ -11,7 +11,7 @@ int majorityElement(int arr[], int n)
         {
             if(arr[i]==arr[j])
                 count++;
-            if(count>=n/2)
+            if(count>n/2)
                 return arr[i];
         }
         count=0;
