@@ -66,4 +66,5 @@ int main()
     cout << majorityElement(arr, size)<<endl;
     cout << "Moore voting algo: ";
     cout << mjele(arr, size);
+    
 }
