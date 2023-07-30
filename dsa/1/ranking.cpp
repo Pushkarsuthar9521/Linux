@@ -1,27 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
-{
-    cout<<"Enter the number of string :";
-    int n;
-    cin>>n;
-    string  str[n];
- 
-    pair<string, int> p;
-    for(auto x : )
-    
+int main(){
 
-    for(int i=0;i<n;i++)
+    string s="tata ford toyota";
+    stringstream is(s);
+    vector<int>v;
+
+    while(is>>s)
     {
-        cin>>str[i];
-        // pair<string,int>p;
-        // p.first=str[i];
-        // p.second=i;
-        // v.push_back(p);
-        v.push_back(make_pair(str[i],i));
+        int rank=0;
+        if(s=="ford")
+            rank=1;
+        else if(s=="toyota"){
+            rank=2;
+        }
+        else if(s=="tata"){
+            rank=3;
+        }
+        v.push_back(rank);
+        cout<<rank <<" ";
     }
 
+    int totalrank=0, n=v.size();
 
-
+    for(int i=1;i<=n;i++){
+        totalrank+=v[i-1]*(pow(3,3-i));
+    }
+    cout<<endl;
+    cout<<"Total rank : "<<totalrank;
 
 }

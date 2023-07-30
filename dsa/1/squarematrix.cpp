@@ -33,7 +33,7 @@ int main()
             // cout<<mat[i][j]<<" ";
 
         }
-        cout<<endl;
+        // cout<<endl;
     }         
    
     cout<<"difference of diagonal elements is : "<<s1-s2;
