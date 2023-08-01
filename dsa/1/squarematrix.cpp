@@ -15,27 +15,33 @@ int main()
         }
     }
 
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<n;j++)
-        {
-            if(i==j){
+    // for(int i=0;i<n;i++)
+    // {
+    //     for(int j=0;j<n;j++)
+    //     {
+    //         if(i==j){
 
-                s1+=mat[i][j];
-            }
-            if(j==n-1-i){
+    //             s1+=mat[i][j];
+    //         }
+    //         if(j==n-1-i){
 
-                s2+=mat[i][j];
-                // cout<<mat[i][j]<<" ";
-            }
-            cout<<endl;
+    //             s2+=mat[i][j];
+    //             // cout<<mat[i][j]<<" ";
+    //         }
+    //         cout<<endl;
 
-            // cout<<mat[i][j]<<" ";
+    //         // cout<<mat[i][j]<<" ";
 
-        }
-        // cout<<endl;
-    }         
+    //     }
+    //     // cout<<endl;
+    // }         
    
-    cout<<"difference of diagonal elements is : "<<s1-s2;
+    for(int i=0;i<n;i++){
+        s1+=mat[i][i];
+        s2+=mat[i][n-i-1];
+
+    }
+
+    cout<<"difference of diagonal elements is : "<<abs(s1-s2);
     return 0;
 }
