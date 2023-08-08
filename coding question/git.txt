@@ -1,0 +1,87 @@
+git init
+
+fork 
+
+git clone link
+
+git remote add origin link    // origin branch 
+
+git status   // for check
+
+
+
+-----------------*****************----------------------------------------------
+git diff +'file name'  -> it shows the latest commit with 		differecnce
+
+Git log  -> it shows the all the commits
+
+Git log -p -> it shows latest commits with diff
+
+git log --online -> show the commits with littile difference
+
+git log --stat -> it shows which files modifies in latest commits
+
+
+git show 'commit id' -> it shows all the changes in perticular 		  commit
+
+git restore 'file name' -> it restore to the previous commit
+
+-------------------------------------------------------************----------------
+ 
+
+- git branch -> shows all branches
+- git branch + branch_name -> create new branch
+
+-git checkout + branch_name -> to select/move on perticular 			branch
+
+- git checkout -b + branch_name -> create branch + move on 
+
+- git add -am "message" -> add and commit together
+
+- git merge branchname -> to merge the branch
+
+- git branch -d branchname -> to delete the branch
+
+ -----------------------------***************------------------------------
+
+Undo Commit
+
+- git commit --amend  ---- > message undo or change
+- git revert
+- git reset --soft "commit ID" 
+	--mixed
+	--hard
+
+------------------------pull to git hub----------------------------
+
+- git init
+- create a README.md file
+- git add README.md 
+- git commit -m "first commit"
+- git remote add origin "repo link"
+- git config --global user.name "username"
+-git config --global user.email "useremail"
+
+- git push -u origin master 
+
+
+
+
+--------------------------------change in already created repo-------------
+1. desktop -> open bash
+2. git init 
+3. remote add origin LINK
+	git fetch
+4. git clone 
+5. (folder)
+6. rm -rf  .git (remove git from desktop)
+7. folder -> do all commits and changes 
+
+git merge branches 
+- compare & pull request
+- create a pull request 
+- merge 
+- confirm merge 
+
+git bash ->  git pull (master)
+

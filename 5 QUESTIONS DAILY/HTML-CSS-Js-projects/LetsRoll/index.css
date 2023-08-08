@@ -1,0 +1,219 @@
+/* Variables */
+:root {
+  --gradient: linear-gradient(
+    45deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc75f,
+    #f9f871
+  );
+  --player-name: linear-gradient(blue, red);
+  --btn-color-active: linear-gradient(45deg, rgb(5, 247, 255), rgb(0, 47, 255));
+  --btn-color-disabled: linear-gradient(
+    45deg,
+    rgb(0, 47, 255),
+    rgb(255, 5, 26)
+  );
+  --heading: #00ffff;
+  --primary-color: #00f7ff;
+  --secondary-color: #93fbff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: cursive;
+  /* background-color: #dfdfdf; */
+  background-image: var(--gradient);
+
+  /* Remove below comments to see animation */
+  /* background-size: 400%; */
+  /* background-position: left; */
+  /* animation: animate 30s ease-in-out 0s infinite alternate; */
+}
+
+/* Animation */
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/* Utility Classes */
+.shrink {
+  transition: linear 0.3s;
+  transform: scale(0);
+}
+.grow {
+  transition: linear 0.3s;
+  transform: scale(1);
+}
+.align-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Main Container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin: 0px auto;
+}
+
+/* Heading */
+.heading {
+  top: 6vh;
+  margin: 0px auto;
+  font-family: "Lobster", cursive;
+  text-align: center;
+  color: var(--heading);
+  text-shadow: 2px 3px #183977;
+  font-size: 1.5rem;
+  width: 80vw;
+}
+
+/* Dice Container */
+.dice-container {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 85vw;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Player Container */
+.player1,
+.player2 {
+  align-items: center;
+  margin: 0px auto;
+}
+
+/* Player Names */
+.player-name {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: cursive;
+  text-align: center;
+  background-image: var(--player-name);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Dice Image */
+.dice {
+  width: 15rem;
+  max-width: 20vw;
+}
+
+/* Scores */
+.scores {
+  font-size: 0.7rem;
+  color: var(--secondary-color);
+}
+/* player score */
+.scores span {
+  color: var(--primary-color);
+}
+/* Attempts */
+.attempts {
+  bottom: 21vh;
+}
+
+/* Button */
+.btn {
+  bottom: 12vh;
+  font-family: "indie flower", cursive;
+  font-size: 1rem;
+  padding: 1px 8px;
+  align-items: center;
+  width: 8vw;
+  height: 23px;
+  max-width: 90px;
+  min-width: 70px;
+  min-height: 14px;
+  max-height: 28px;
+  color: #fff;
+  background-image: var(--btn-color-active);
+  cursor: pointer;
+  border-radius: 9999px;
+  box-shadow: 5px 5px 10px 1px rgb(83, 45, 207);
+  border: none;
+}
+/* Button hover and focus */
+.btn:hover,
+.btn:focus {
+  width: 22vw;
+  height: 41px;
+  max-width: 145px;
+  min-width: 130px;
+  min-height: 39px;
+  max-height: 43px;
+  background-size: 200%;
+  bottom: 11.5vh;
+  animation: animate 1.5s ease-out infinite alternate;
+}
+/* Button disabled */
+.disabled {
+  cursor: not-allowed;
+  background-image: var(--btn-color-disabled);
+}
+
+/* Footer */
+.footer {
+  bottom: 2vh;
+  color: var(--primary-color);
+}
+
+/* Media Query */
+@media (min-width: 348px) {
+  .player-name {
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+  .scores {
+    font-size: 0.8rem;
+  }
+  .heading {
+    font-size: 2rem;
+    text-shadow: 3px 5px #183977;
+  }
+  .btn {
+    font-size: 1.5rem;
+    padding: 3px 15px;
+    width: 20vw;
+    height: 38px;
+    max-width: 140px;
+    min-width: 120px;
+    min-height: 36px;
+    max-height: 40px;
+  }
+}
+@media (min-width: 468px) {
+  .player-name {
+    font-size: 1.8rem;
+  }
+  .scores {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .player-name {
+    font-size: 2.1rem;
+  }
+  .scores {
+    font-size: 1.4rem;
+  }
+  .footer {
+    bottom: 1vh;
+  }
+}

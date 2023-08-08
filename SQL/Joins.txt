@@ -1,0 +1,12 @@
+----JOINS-----------------
+supose we have 4 tables
+-employee
+-department
+-manger
+-projects
+
+question the employee name and the department name they belong to.
+
+--Inner join(JOIN)
+
+query: -  select e.emp_name, d.dept_name from employee e inner join department d on e.dept_id = d.dept_id;
