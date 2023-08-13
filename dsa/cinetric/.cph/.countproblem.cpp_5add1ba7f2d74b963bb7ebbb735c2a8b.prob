@@ -1,0 +1,1 @@
+{"name":"Local: countproblem","url":"c:\\Users\\Lenovo\\Desktop\\Linux\\dsa\\cinetric\\countproblem.cpp","tests":[{"id":1691864178658,"input":"2\n3\nstart38 ltime108 start38\nltime108 ltime108 start38\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\Desktop\\Linux\\dsa\\cinetric\\countproblem.cpp","group":"local","local":true}

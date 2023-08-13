@@ -75,6 +75,7 @@ void printlist(Node* &head)
 
 int main()
 {
+    
     Node* node1 = new Node(10);
     // cout<<node1->data<<endl;
     // cout<<node1->next<<endl;
@@ -83,23 +84,36 @@ int main()
     // cout<<"1.Insert at first: \n 2. Insert at last :";
     // cin>>n;
     
+    
     // head pointer to first node
     Node* head = node1;
     printlist(head);
     Node* tail=node1;
-    insertFirst(head, 12);
 
-    printlist(head);
 
-    insertLast(tail, 200);
+    int n;
+    cout<<"Enter the value of n:";
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        int x=0;
+        cin>>x;
+        insertLast(tail,x);
+    }
 
-    printlist(head);
+    // insertFirst(head, 12);
+
+    // printlist(head);
+
+    // insertLast(tail, 200);
+
+    // printlist(head);
     
-    int p;
-    cout<<"Enter the position :";
-    cin>>p;
+    // int p;
+    // cout<<"Enter the position :";
+    // cin>>p;
 
-    insertPos(tail, head, p, 22);
+    // insertPos(tail, head, p, 22);
     printlist(head);
     // while(n){
         
@@ -113,4 +127,5 @@ int main()
                     
     //     }
     // }
+    return 0;
 }
